@@ -1,0 +1,25 @@
+<section class="page container section-pad">
+  <div class="tech-head">
+    <p class="eyebrow" style="justify-content: center">What I build with</p>
+    <h2 class="h-section">My Tech Stack</h2>
+    <p>Technologies I’ve been working with recently</p>
+  </div>
+
+  <div class="tech-grid">
+    @for (t of techStack(); track t.name) {
+      <div class="tech-tile">
+        <div class="tech-ico">
+          <div
+            class="tech-letter"
+            [style.background]="t.background"
+            [style.color]="t.color"
+            [style.font-size.px]="t.fontSize ?? 16"
+          >
+            {{ t.label }}
+          </div>
+        </div>
+        <div class="tech-name">{{ t.name }}</div>
+      </div>
+    }
+  </div>
+</section>

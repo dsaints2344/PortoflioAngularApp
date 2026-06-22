@@ -17,6 +17,12 @@
     "@angular/forms": "^22.0.0",
     "@angular/platform-browser": "^22.0.0",
     "@angular/router": "^22.0.0",
+    "@supabase/server": "^1.1.0",
+    "@supabase/supabase-js": "^2.108.2",
+    "@taiga-ui/cdk": "^5.11.0",
+    "@taiga-ui/core": "^5.11.0",
+    "@taiga-ui/icons": "^5.11.0",
+    "@taiga-ui/kit": "^5.11.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.16.0"
@@ -26,6 +32,7 @@
     "@angular/cli": "^22.0.2",
     "@angular/compiler-cli": "^22.0.0",
     "jsdom": "^28.0.0",
+    "less": "^4.6.6",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
     "vitest": "^4.0.8"

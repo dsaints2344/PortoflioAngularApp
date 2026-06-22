@@ -1,0 +1,55 @@
+@switch (name()) {
+  @case ('github') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 26.224 25.189" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="nonzero" d="M 13.113 0 C 5.868 -0.003 0 5.784 0 12.927 C 0 18.575 3.671 23.376 8.783 25.14 C 9.472 25.31 9.366 24.828 9.366 24.498 L 9.366 22.258 C 5.391 22.717 5.229 20.122 4.963 19.688 C 4.424 18.78 3.149 18.549 3.53 18.116 C 4.436 17.656 5.358 18.231 6.428 19.789 C 7.201 20.919 8.71 20.729 9.475 20.541 C 9.642 19.861 9.999 19.254 10.491 18.783 C 6.372 18.055 4.655 15.575 4.655 12.626 C 4.655 11.195 5.133 9.88 6.07 8.819 C 5.473 7.07 6.126 5.573 6.214 5.351 C 7.916 5.2 9.686 6.553 9.823 6.66 C 10.79 6.403 11.895 6.267 13.131 6.267 C 14.373 6.267 15.48 6.409 16.456 6.669 C 16.787 6.42 18.428 5.258 20.01 5.4 C 20.095 5.622 20.733 7.085 20.171 8.811 C 21.12 9.874 21.604 11.201 21.604 12.635 C 21.604 15.589 19.875 18.072 15.744 18.789 C 16.098 19.132 16.379 19.542 16.571 19.993 C 16.762 20.445 16.861 20.93 16.86 21.42 L 16.86 24.671 C 16.884 24.932 16.86 25.189 17.3 25.189 C 22.488 23.463 26.224 18.627 26.224 12.93 C 26.224 5.784 20.353 0 13.113 0 Z" />
+    </svg>
+  }
+  @case ('linkedin') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 28.8 28.8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="nonzero" d="M 14.4 0 C 6.447 0 0 6.447 0 14.4 C 0 22.353 6.447 28.8 14.4 28.8 C 22.353 28.8 28.8 22.353 28.8 14.4 C 28.8 6.447 22.353 0 14.4 0 Z M 10.875 20.368 L 7.959 20.368 L 7.959 10.984 L 10.875 10.984 L 10.875 20.368 Z M 9.399 9.832 C 8.478 9.832 7.883 9.18 7.883 8.373 C 7.883 7.549 8.496 6.917 9.436 6.917 C 10.377 6.917 10.953 7.549 10.971 8.373 C 10.971 9.18 10.377 9.832 9.399 9.832 Z M 21.525 20.368 L 18.609 20.368 L 18.609 15.168 C 18.609 13.958 18.186 13.135 17.132 13.135 C 16.326 13.135 15.848 13.692 15.636 14.228 C 15.558 14.418 15.538 14.688 15.538 14.957 L 15.538 20.367 L 12.621 20.367 L 12.621 13.977 C 12.621 12.806 12.583 11.826 12.545 10.983 L 15.078 10.983 L 15.212 12.286 L 15.27 12.286 C 15.654 11.674 16.595 10.771 18.168 10.771 C 20.087 10.771 21.525 12.057 21.525 14.82 L 21.525 20.368 Z" />
+    </svg>
+  }
+  @case ('company') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 20 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="nonzero" d="M 16 12 L 14 12 L 14 14 L 16 14 M 16 8 L 14 8 L 14 10 L 16 10 M 18 16 L 10 16 L 10 14 L 12 14 L 12 12 L 10 12 L 10 10 L 12 10 L 12 8 L 10 8 L 10 6 L 18 6 M 8 4 L 6 4 L 6 2 L 8 2 M 8 8 L 6 8 L 6 6 L 8 6 M 8 12 L 6 12 L 6 10 L 8 10 M 8 16 L 6 16 L 6 14 L 8 14 M 4 4 L 2 4 L 2 2 L 4 2 M 4 8 L 2 8 L 2 6 L 4 6 M 4 12 L 2 12 L 2 10 L 4 10 M 4 16 L 2 16 L 2 14 L 4 14 M 10 4 L 10 0 L 0 0 L 0 18 L 20 18 L 20 4 L 10 4 Z" />
+    </svg>
+  }
+  @case ('arrow-right') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  }
+  @case ('external-link') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 3h6v6M21 3l-9 9" />
+      <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6" />
+    </svg>
+  }
+  @case ('mail') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M4 7l8 6 8-6" />
+    </svg>
+  }
+  @case ('map-pin') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </svg>
+  }
+  @case ('check') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 12.5l5 5L20 6.5" />
+    </svg>
+  }
+  @case ('menu') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 6h18M3 12h18M3 18h18" />
+    </svg>
+  }
+  @case ('close') {
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  }
+}

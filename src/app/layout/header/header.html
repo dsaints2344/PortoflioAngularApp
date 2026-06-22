@@ -1,0 +1,50 @@
+<header class="site-header" [class.scrolled]="scrolled()">
+  <nav class="nav" [class.open]="open()">
+    <button class="brand" type="button" routerLink="/home" (click)="close()" aria-label="Home">
+      <span class="brand-mark">dsaints2344</span>
+      <span class="brand-frame"></span>
+    </button>
+
+    <div class="nav-spacer"></div>
+
+    <div class="nav-links">
+      @for (tab of tabs; track tab.path) {
+        <a
+          class="nav-link"
+          [routerLink]="tab.path"
+          routerLinkActive="active"
+          (click)="close()"
+          >{{ tab.label }}</a
+        >
+      }
+    </div>
+
+    <div class="nav-socials">
+      <a
+        class="icon-btn"
+        [href]="socials().linkedinUrl"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
+        <app-icon name="linkedin" [size]="22" />
+      </a>
+      <a
+        class="icon-btn"
+        [href]="socials().githubUrl"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="GitHub"
+      >
+        <app-icon name="github" [size]="22" />
+      </a>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-label="Menu" (click)="toggle()">
+      @if (open()) {
+        <app-icon name="close" [size]="26" />
+      } @else {
+        <app-icon name="menu" [size]="26" />
+      }
+    </button>
+  </nav>
+</header>

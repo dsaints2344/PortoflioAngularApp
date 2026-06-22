@@ -1,0 +1,42 @@
+<section class="page container section-pad">
+  <div style="margin-bottom: 40px">
+    <p class="eyebrow">Selected work</p>
+    <h2 class="h-section">Projects</h2>
+    <p class="lead" style="margin-top: 14px">
+      A few things I’ve built. Swap in your own screenshots, copy and links — the layout is
+      ready to go.
+    </p>
+  </div>
+
+  <div class="proj-grid">
+    @for (p of projects(); track p.title) {
+      <div class="proj-card" [class.feat]="p.featured">
+        <div class="proj-shot">
+          <span [class]="p.badgeClass + ' proj-badge'">{{ p.featured ? 'Featured' : 'Project' }}</span>
+          <span class="ph-note">{{ p.placeholderNote }}</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">{{ p.title }}</h3>
+          <p class="proj-desc">{{ p.description }}</p>
+          <div class="proj-tags">
+            @for (tag of p.tags; track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" [href]="p.codeUrl" target="_blank" rel="noreferrer">
+              <app-icon name="github" [size]="17" />Code
+            </a>
+            <a
+              class="proj-link"
+              [href]="p.liveUrl"
+              (click)="p.liveUrl === '#' && $event.preventDefault()"
+            >
+              <app-icon name="external-link" [size]="17" />Live
+            </a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

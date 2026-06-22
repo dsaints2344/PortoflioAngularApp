@@ -1,0 +1,14 @@
+<div class="exp-card">
+  <div class="exp-top">
+    <div>
+      <h3 class="exp-title">{{ item().role }}</h3>
+      <div class="exp-meta">
+        <app-icon name="company" [size]="17" />{{ item().company }}
+        <span class="exp-dot"></span>
+        <span class="exp-period">{{ item().period }}</span>
+      </div>
+    </div>
+    <span [class]="item().badgeClass">{{ item().type }}</span>
+  </div>
+  <p class="exp-desc">{{ item().description }}</p>
+</div>

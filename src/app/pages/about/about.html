@@ -1,0 +1,25 @@
+<section class="page container section-pad about-grid">
+  <div>
+    <p class="eyebrow">Get to know me</p>
+    <h2 class="h-section">About Me</h2>
+    <p class="about-bio" [innerHTML]="aboutBio()"></p>
+  </div>
+
+  <div>
+    <h2 class="h-section" style="margin-bottom: 24px">Work Experience</h2>
+    <div class="tl">
+      @for (item of experience(); track item.role) {
+        <app-exp-card [item]="item" />
+      }
+    </div>
+  </div>
+
+  <div>
+    <h2 class="h-section" style="margin-bottom: 24px">Education</h2>
+    <div class="tl">
+      @for (item of education(); track item.role) {
+        <app-exp-card [item]="item" />
+      }
+    </div>
+  </div>
+</section>

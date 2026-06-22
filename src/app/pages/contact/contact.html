@@ -1,0 +1,65 @@
+<section class="page container section-pad contact-grid">
+  <div class="contact-aside">
+    <p class="eyebrow">Let’s talk</p>
+    <h2 class="h-section">Get in touch</h2>
+    <p class="contact-blurb">{{ blurb() }}</p>
+    <div class="contact-links">
+      <a class="contact-link" [href]="socials().githubUrl" target="_blank" rel="noreferrer">
+        <span class="ci"><app-icon name="github" [size]="22" /></span>
+        <span>
+          <span class="cl-label" style="display: block">GitHub</span>
+          <span class="cl-val">{{ socials().githubHandle }}</span>
+        </span>
+      </a>
+      <div class="contact-link" style="cursor: default">
+        <span class="ci"><app-icon name="map-pin" [size]="22" /></span>
+        <span>
+          <span class="cl-label" style="display: block">Status</span>
+          <span class="cl-val">{{ availability() }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <form class="form-card" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="field" [class.invalid]="isInvalid('email')">
+      <label for="c-email">Email <span class="req">*</span></label>
+      <input id="c-email" type="email" formControlName="email" placeholder="you@example.com" />
+      <div class="err">{{ errorFor('email') }}</div>
+    </div>
+
+    <div class="field">
+      <label for="c-subject">Subject</label>
+      <input id="c-subject" type="text" formControlName="subject" placeholder="What’s this about?" />
+    </div>
+
+    <div class="field" [class.invalid]="isInvalid('message')">
+      <label for="c-message">Message <span class="req">*</span></label>
+      <textarea
+        id="c-message"
+        formControlName="message"
+        placeholder="Tell me a bit about what you have in mind…"
+      ></textarea>
+      <div class="err">{{ errorFor('message') }}</div>
+    </div>
+
+    <div class="form-foot">
+      <span class="form-hint">I usually reply within a day or two.</span>
+      <button type="submit" class="btn btn-submit" [disabled]="submitting()">
+        Send message <app-icon name="arrow-right" [size]="18" />
+      </button>
+    </div>
+
+    @if (sent()) {
+      <div class="form-success">
+        <div class="success-check"><app-icon name="check" [size]="38" /></div>
+        <h3>Message sent!</h3>
+        <p>
+          Thanks for reaching out, I’ll be in touch soon. (This is a prototype — nothing was
+          actually emailed.)
+        </p>
+        <button type="button" class="link-btn" (click)="reset()">Send another</button>
+      </div>
+    }
+  </form>
+</section>
