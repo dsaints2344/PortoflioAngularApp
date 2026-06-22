@@ -14,4 +14,5 @@ export class About {
   readonly aboutBio = this.portfolio.aboutBio;
   readonly experience = this.portfolio.experience;
   readonly education = this.portfolio.education;
+
 }

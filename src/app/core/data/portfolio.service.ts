@@ -35,6 +35,34 @@ const grad = (from: string, to: string): string =>
 export class PortfolioService {
   private readonly supabase = inject(SupabaseService);
 
+  constructor() {
+    console.log('[PortfolioService] constructor — isConfigured:', this.supabase.isConfigured);
+    if (this.supabase.isConfigured) {
+      this.supabase.client
+        .from('work_experience')
+        .select('*')
+        .then(({ data, error }) => {
+          if (error) {
+            console.error('[PortfolioService] work_experience fetch failed:', error.message);
+            return;
+          }
+          if (data?.length) {
+            console.log('[PortfolioService] work_experience data loaded:', data);
+            this.experience.set(
+              data.map(row => ({
+                role: row['role'],
+                company: row['company'],
+                period: row['period'],
+                type: row['type'],
+                badgeClass: row['badge_class'] ?? 'badge',
+                description: row['description'],
+              })),
+            );
+          }
+        });
+    }
+  }
+
   readonly socials = signal<SocialLinks>({
     githubUrl: 'https://github.com/dsaints2344',
     githubHandle: '@dsaints2344',

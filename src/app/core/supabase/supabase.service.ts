@@ -26,6 +26,8 @@ export class SupabaseService {
       );
     }
 
+    console.debug('[SupabaseService] Creating Supabase client with URL:', environment.supabase.url);
+
     return (this.cachedClient ??= createClient(
       environment.supabase.url,
       environment.supabase.anonKey,
