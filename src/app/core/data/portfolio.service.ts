@@ -50,8 +50,8 @@ export class PortfolioService {
             console.log('[PortfolioService] work_experience data loaded:', data);
             this.experience.set(
               data.map(row => ({
-                role: row['role'],
-                company: row['company'],
+                role: row['title'],
+                company: row['place'],
                 period: row['period'],
                 type: row['type'],
                 badgeClass: row['badge_class'] ?? 'badge',
